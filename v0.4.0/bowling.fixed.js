@@ -22,10 +22,10 @@ class Bowling {
     var index = 0;
     for (var frame = 0; frame < 10; frame++) {
       if (this.isStrike(index)) {
-        sum += 10 + this.pins[index + 1] + this.pins[index + 2];
+        sum += this.pins[index] + this.pins[index + 1] + this.pins[index + 2];
         index += 1;
       } else if (this.isSpare(index)) {
-        sum += 10 + this.pins[index + 2];
+        sum += this.pins[index] + this.pins[index + 1] + this.pins[index + 2];
         index += 2;
       } else {
         sum += this.pins[index] + this.pins[index + 1];
